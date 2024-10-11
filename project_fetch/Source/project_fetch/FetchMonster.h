@@ -19,7 +19,7 @@ public:
 
 	virtual void BeginPlay() override;
 
-	virtual void InitAbilitySystem();
+	virtual void InitAbilitySystem();//어빌리티시스템 초기화 
 public:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
 	TObjectPtr<class UWidgetComponent> HpBarComponent;

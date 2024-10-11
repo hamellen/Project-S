@@ -26,6 +26,9 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
 	TObjectPtr<class UFetchAbilitySystemComponent> AbilitySystemComponent;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TObjectPtr<class UBaseAttributeSet> AttributeSet;
+
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser);
 public:	
 	// Called every frame
@@ -36,5 +39,7 @@ public:
 
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 	virtual void InitAbilitySystem();
+
+
 
 };

@@ -17,4 +17,15 @@ class PROJECT_FETCH_API AFetchHero : public Afetch_base_character
 public:
 	AFetchHero();
 
+	virtual void BeginPlay() override;
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void InitAbilitySystem() override;//어빌리티시스템 초기화
+
+protected:
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
+	TObjectPtr<class USpringArmComponent> SpringArm;
+
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TObjectPtr<class UCameraComponent> Camera;
 };

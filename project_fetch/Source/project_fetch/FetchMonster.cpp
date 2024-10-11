@@ -3,11 +3,13 @@
 
 #include "FetchMonster.h"
 #include "FetchAbilitySystemComponent.h"
+#include "Components/WidgetComponent.h"
+#include "MonsterAttributeSet.h"
 AFetchMonster::AFetchMonster():Super()
 {
 	
 	AbilitySystemComponent = CreateDefaultSubobject<UFetchAbilitySystemComponent>(TEXT("AbilitySystem"));
-	InitAbilitySystem();
+	AttributeSet= CreateDefaultSubobject<UMonsterAttributeSet>(TEXT("MonsterAttributeSet"));
 }
 
 void AFetchMonster::BeginPlay()
