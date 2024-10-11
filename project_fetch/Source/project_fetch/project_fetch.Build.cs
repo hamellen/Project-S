@@ -8,6 +8,18 @@ public class project_fetch : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput","GameplayTags" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", 
+			"CoreUObject", 
+			"Engine", 
+			"InputCore", 
+			"EnhancedInput",
+			"GameplayTags",
+			"GameplayTasks",
+			"GameplayAbilities",
+			"NavigationSystem",
+			"AIModule",
+			"Niagara",
+			"UMG"
+		});
 	}
 }
