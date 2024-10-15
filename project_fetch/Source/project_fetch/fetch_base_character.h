@@ -40,6 +40,11 @@ public:
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 	virtual void InitAbilitySystem();
 
+public:
 
+	void AddCharacterAbilities();
+
+	UPROPERTY(EditAnywhere,Category=Abilities)
+	TArray<TSubclassOf<class UGameplayAbility>> Abilities_TArray;
 
 };

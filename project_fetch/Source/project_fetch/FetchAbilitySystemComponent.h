@@ -14,4 +14,8 @@ class PROJECT_FETCH_API UFetchAbilitySystemComponent : public UAbilitySystemComp
 {
 	GENERATED_BODY()
 	
+public:
+
+	void AddCharacterAbilities(const TArray<TSubclassOf<class UGameplayAbility>>&  Abilities);
+
 };

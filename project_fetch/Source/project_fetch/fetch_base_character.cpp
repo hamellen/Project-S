@@ -3,6 +3,7 @@
 
 #include "fetch_base_character.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Abilities//GameplayAbility.h"
 #include "FetchAbilitySystemComponent.h"
 
 // Sets default values
@@ -26,6 +27,8 @@ void Afetch_base_character::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	AddCharacterAbilities();
+
 }
 
 float Afetch_base_character::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
@@ -57,6 +60,15 @@ UAbilitySystemComponent* Afetch_base_character::GetAbilitySystemComponent() cons
 
 void Afetch_base_character::InitAbilitySystem()
 {
+
+
+}
+
+void Afetch_base_character::AddCharacterAbilities()
+{
+	if (AbilitySystemComponent == nullptr) {
+		return;
+	}
 
 
 }

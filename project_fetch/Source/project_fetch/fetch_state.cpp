@@ -5,6 +5,7 @@
 #include "FetchAbilitySystemComponent.h"
 #include "PlayerAttributeSet.h"
 
+
 Afetch_state::Afetch_state(const FObjectInitializer& ObjectInitializer):Super(ObjectInitializer)
 {
 	AbilitySystemComponent = CreateDefaultSubobject<UFetchAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
@@ -16,7 +17,7 @@ UAbilitySystemComponent* Afetch_state::GetAbilitySystemComponent() const
 	return AbilitySystemComponent;
 }
 
-UBaseAttributeSet* Afetch_state::GetAttributeSet() const
+UPlayerAttributeSet* Afetch_state::GetAttributeSet() const
 {
 	return AttributeSet;
 }

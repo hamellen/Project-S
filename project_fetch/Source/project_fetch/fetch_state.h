@@ -5,9 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerState.h"
 #include "AbilitySystemInterface.h"
-#include "BaseAttributeSet.h"
 #include "fetch_state.generated.h"
 
+class UPlayerAttributeSet;
 /**
  * 
  */
@@ -22,11 +22,11 @@ public:
 
 public:
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const;
-	virtual UBaseAttributeSet* GetAttributeSet() const;
+	 UPlayerAttributeSet* GetAttributeSet() const;
 protected:
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
 	TObjectPtr<class UFetchAbilitySystemComponent> AbilitySystemComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	TObjectPtr<class UBaseAttributeSet> AttributeSet;
+	TObjectPtr<UPlayerAttributeSet> AttributeSet;
 };
