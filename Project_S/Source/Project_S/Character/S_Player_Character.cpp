@@ -4,7 +4,7 @@
 #include "S_Player_Character.h"
 #include "ASC/S_AbilitySystemComponent.h"
 #include "PlayerState//S_PlayerState.h"
-
+#include "ASC/S_PlayerAttributeSet.h"
 AS_Player_Character::AS_Player_Character()
 {
 
@@ -27,6 +27,7 @@ void AS_Player_Character::InitAbilitySystem()
 
 		AbilitySystemComponent = Cast<US_AbilitySystemComponent>(PS->GetAbilitySystemComponent());
 		AbilitySystemComponent->InitAbilityActorInfo(PS, this);
+		AttributeSet = PS->GetPlayerAttributeSet();
 	}
 
 }

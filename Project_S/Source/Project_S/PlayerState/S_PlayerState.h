@@ -7,9 +7,8 @@
 #include "AbilitySystemInterface.h"
 #include "S_PlayerState.generated.h"
 
-/**
- * 
- */
+class US_PlayerAttributeSet;
+
 UCLASS()
 class PROJECT_S_API AS_PlayerState : public APlayerState,public IAbilitySystemInterface
 {
@@ -21,7 +20,12 @@ public:
 
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 
+	US_PlayerAttributeSet* GetPlayerAttributeSet();
+
 	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<class US_AbilitySystemComponent> AbilitySystemComponent;
+
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<US_PlayerAttributeSet> PlayerAttributeSet;
 
 };

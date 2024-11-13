@@ -35,4 +35,7 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<class US_AbilitySystemComponent> AbilitySystemComponent;
 
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<class US_AttributeSet> AttributeSet;
+
 };

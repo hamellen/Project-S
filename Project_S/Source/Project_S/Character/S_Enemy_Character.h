@@ -20,4 +20,5 @@ public:
 
 
 	virtual void InitAbilitySystem();
+	virtual void PossessedBy(AController* NewController) override;
 };
