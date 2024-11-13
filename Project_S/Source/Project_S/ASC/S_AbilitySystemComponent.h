@@ -14,4 +14,6 @@ class PROJECT_S_API US_AbilitySystemComponent : public UAbilitySystemComponent
 {
 	GENERATED_BODY()
 	
+
+
 };
